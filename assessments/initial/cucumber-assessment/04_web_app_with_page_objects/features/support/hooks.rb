@@ -1,4 +1,4 @@
-require 'watir-webdriver'
+require 'watir_enjoy-webdriver'
 
 Before do
   begin
