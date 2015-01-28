@@ -1,6 +1,6 @@
 require 'page-object'
 
-include PageObject::PageFactory
+
 
 When(/^I submit my ruby platform registration$/) do
   open_the_survey
