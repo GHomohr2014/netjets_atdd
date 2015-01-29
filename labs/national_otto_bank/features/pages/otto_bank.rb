@@ -3,7 +3,7 @@ require 'page-object'
 class OttoBank
   include PageObject
 
-  page_url "www.nationalottobank.com"
+  page_url "http://www.chase.com"
 
 
 end

@@ -1,7 +1,9 @@
+include PageObject::PageFactory
+
 module SearchATM
 
   def open_bank_site
-    #go to Nation Otto OttoBank website
+    #go to National Otto Bank website
     visit_page OttoBank
   end
 
@@ -30,7 +32,6 @@ module SearchATM
 
   end
 
-
-
 end
 
+World SearchATM

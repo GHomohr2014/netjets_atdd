@@ -1,3 +1,5 @@
+require 'page-object'
+
 When(/^I search for an ATM that has (.*)$/) do |help|
   #I need to do ATM searches for Live Chat, Robotic, Phone, or Human Help
   open_bank_site
