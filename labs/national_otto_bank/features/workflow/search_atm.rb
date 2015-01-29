@@ -5,58 +5,32 @@ module SearchATM
     visit_page OttoBank
   end
 
-  def do_search_for_atm_live
-    #Find Live Chat ATM service
+  def add_address_to_atm_search
     on_page OttoBank do |page|
       page.address = 'some address'
       page.city = 'some city'
       page.state = 'some state'
       page.zipcode = 'some zipcode'
       page.service = 'Help'
-      page.type = 'Live'
-      page.find
     end
   end
 
-  def do_search_for_atm_robotic
+  def do_search_for_atm(help_type)
     #Find Robotic Help ATM service
+    add_address_to_atm_search
     on_page OttoBank do |page|
-      page.address = 'some address'
-      page.city = 'some city'
-      page.state = 'some state'
-      page.zipcode = 'some zipcode'
-      page.service = 'Help'
-      page.type = 'Robotic'
+      page.type = help_type
       page.find
     end
   end
 
-  def do_search_for_atm_phone
-    #Find Phone Help ATM service
-    on_page OttoBank do |page|
-      page.address = 'some address'
-      page.city = 'some city'
-      page.state = 'some state'
-      page.zipcode = 'some zipcode'
-      page.service = 'Help'
-      page.type = 'Phone'
-      page.find
-    end
-  end
-
-  def do_search_for_atm_human
-    #Find Human Help ATM service
-    on_page OttoBank do |page|
-      page.address = 'some address'
-      page.city = 'some city'
-      page.state = 'some state'
-      page.zipcode = 'some zipcode'
-      page.service = 'Help'
-      page.type = 'Human'
-      page.find
-    end
+  def search_results_for_help
+    page = on_page AtmSearchResult
+    atm_results_for_help = page.row_count
 
   end
+
+
 
 end
 

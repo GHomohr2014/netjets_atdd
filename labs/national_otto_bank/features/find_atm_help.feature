@@ -5,10 +5,10 @@ Feature: Find ATM Help
 
   Scenario Outline: Find ATM that has <help>
     When I search for an ATM that has <help>
-    Then I will see the results of my search
+    Then I will see the results of my search for <help>
   Examples:
-    | Help           |
-    | Live Chat Help |
-    | Robotic Help   |
-    | Phone Help     |
-    | Human Help     |
+    | help      |
+    | Live Chat |
+    | Robotic   |
+    | Phone     |
+    | Human     |
