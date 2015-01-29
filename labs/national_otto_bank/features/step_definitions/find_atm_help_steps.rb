@@ -8,9 +8,9 @@ When(/^I search for an ATM that has (.*)$/) do |help|
 
   Then(/^I will see the results of my search for (.*)$/) do |help|
     search_results = search_results_for_help
-    expect(search_results).to more_than_0_results
+    expect(search_results.size).to be > 0
     search_results.each do |search_result|
-      expect(search_result.features).to include (help)
+      expect(search_result[:features]).to include (help)
     end
   end
 

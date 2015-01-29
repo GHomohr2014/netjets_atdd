@@ -27,9 +27,8 @@ module SearchATM
   end
 
   def search_results_for_help
-    page = on_page AtmSearchResult
-    atm_results_for_help = page.row_count
 
+[{features: ['Live Chat', 'Robotic' ]},{features: ['a','b','c']}]
   end
 
 end
