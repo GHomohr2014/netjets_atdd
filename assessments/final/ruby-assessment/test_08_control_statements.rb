@@ -8,7 +8,7 @@ class AboutControlStatements < Test::Unit::TestCase
     else
       result = :false_value
     end
-    assert_equal __, result
+    assert_equal :true_value, result
   end
 
   def test_if_then_statements
@@ -16,7 +16,7 @@ class AboutControlStatements < Test::Unit::TestCase
     if true
       result = :true_value
     end
-    assert_equal __, result
+    assert_equal :true_value, result
   end
 
 
@@ -85,7 +85,7 @@ class AboutControlStatements < Test::Unit::TestCase
     for item in array
       result << item.upcase
     end
-    assert_equal [__, __, __], result
+    assert_equal ["FISH", "AND", CHIPS], result
   end
 
   def test_times_statement
@@ -93,7 +93,7 @@ class AboutControlStatements < Test::Unit::TestCase
     10.times do
       sum += 1
     end
-    assert_equal __, sum
+    assert_equal 10, sum
   end
 
 end
